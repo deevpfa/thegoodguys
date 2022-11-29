@@ -1,0 +1,21 @@
+.d-view {
+    display: flex;
+    justify-content: center;
+      .d-view-container {
+        width: 30%;
+        height: 80%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 3px solid #f75239;
+        background-color: #fca699;
+        .d-view-content{
+          padding-bottom: 80px;
+        }
+        .d-view-header{
+          font-size: 30px;
+        }
+      }
+    }

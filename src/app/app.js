@@ -1,4 +1,8 @@
 import TextView from "./view/text-view/text-view";
+import AView from "./view/a-view/a-view";
+import BView from "./view/b-view/b-view";
+import CView from "./view/c-view/c-view";
+import DView from "./view/d-view/d-view";
 
 export default class App {
 
@@ -6,10 +10,21 @@ export default class App {
 
     }
 
-    async start() {
-        await (new TextView("El")).start();
-        await (new TextView("proyecto")).start();
-        await (new TextView("funciona")).start();
-        await (new TextView("correctamente!")).start();
+
+    async start(){
+        var aView = new AView();
+        await aView.start();
+        
+        
+        var bView = new BView();
+        await bView.start();
+
+
+        var cView = new CView();
+        await cView.start();
+
+
+        var dView = new DView();
+        await dView.start();
     }
 }

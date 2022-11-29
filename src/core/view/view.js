@@ -38,7 +38,8 @@ export default class View {
     }
 
 
-    end(output) {
+        end(output) {
+        console.log(output);
         this.viewElement.remove();
         if (this._callbackPromise != null) {
             this._callbackPromise.resolve(output);
