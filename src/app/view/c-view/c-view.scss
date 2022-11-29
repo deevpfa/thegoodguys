@@ -11,11 +11,49 @@
         justify-content: space-between;
         border: 3px solid #f3ce7f;
         background-color: #fae5b8;
+        span{
+          color: red;
+        }
+        .c-view-header{
+          color: rgb(190, 133, 143);
+        }
         .c-view-content{
           padding-bottom: 80px;
         }
         .c-view-header{
           font-size: 30px;
         }
+        #next{
+          background-color: #9494cf;
+          border-color: #7272ee;;
+        }
+        #swap{
+          background-color: transparent;
+          border-color:  #f3ce7f ;
+        }
+        #restarting{
+          background-color: #fca699;
+          border-color: #f75239;;
+        }
+      }
+      .style-2{
+          background-color: #9494cf;
+          border: 3px solid #7272ee;
+          span{
+            color: blue;
+          }
+          .c-view-header{
+            color: blue;
+          }
+          #swap{
+            border-color: #7272ee;
+            background-color: #9494cf;
+          }
+        
       }
     }
+
+
+
+
+

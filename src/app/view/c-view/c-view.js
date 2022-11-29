@@ -9,6 +9,7 @@ export default class CView extends View {
         super(html);
         this.clickOnButton()
         this.showNumber()
+        this.ToggleStyles()
     }
 
     async clickOnButton(){
@@ -21,5 +22,14 @@ export default class CView extends View {
     }
     async showNumber(number){
         if(number) document.getElementById("number").innerHTML = number
+        if(number > 10) {
+            document.querySelector(".c-view-container").classList.add("style-2")
+        }
+    }
+
+    async ToggleStyles(){
+        Utils.onClickById("swap", () => {
+            document.querySelector(".c-view-container").classList.toggle("style-2")
+        })
     }
 }
