@@ -11,8 +11,8 @@ export default class DView extends View {
     }
 
     async clickOnButton(){
-        Utils.onClickById("next", () => {
-            this.end();
+        Utils.onClickById("back", () => {
+            this.end('back');
         })
     }
 }

@@ -12,7 +12,10 @@ export default class CView extends View {
 
     async clickOnButton(){
         Utils.onClickById("next", () => {
-            this.end();
+            this.end('next');
+        })
+        Utils.onClickById("restarting", () => {
+            this.end('restarting');
         })
     }
 }
