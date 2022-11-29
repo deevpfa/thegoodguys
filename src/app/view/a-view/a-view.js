@@ -12,8 +12,11 @@ export default class AView extends View {
 
     async clickOnButton(){
         Utils.onClickById("next", () => {
-            this.end();
+            let number = document.getElementById("inputNumber").value
+            this.end(number);
         })
     }
+
+    
 
 }

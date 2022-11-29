@@ -13,16 +13,19 @@ export default class App {
     }
 
     async start(){
-        if(this.decision !== 'back') {
+        if(!this.decision) {
             var aView = new AView();
             await aView.start();
         }
         
         var bView = new BView();
+        if(aView) aView._callbackPromise.promise.then((data) => bView.showNumber(data))
+        else bView.showNumber(this.decision)
         await bView.start();
 
 
         var cView = new CView();
+        if(bView) bView._callbackPromise.promise.then((data) => cView.showNumber(data))
         await cView.start();
 
         
@@ -36,14 +39,13 @@ export default class App {
 
             await dView._callbackPromise.promise.then((data) => this.decision = data)
 
-            if(this.decision === 'back'){
+            if(this.decision){
                 this.start()
             }
 
         } else {
-
+            this.decision = null
             return this.start()
-
         }
     }
 }

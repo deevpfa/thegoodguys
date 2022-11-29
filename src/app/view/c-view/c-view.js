@@ -8,6 +8,7 @@ export default class CView extends View {
     constructor() {
         super(html);
         this.clickOnButton()
+        this.showNumber()
     }
 
     async clickOnButton(){
@@ -17,5 +18,8 @@ export default class CView extends View {
         Utils.onClickById("restarting", () => {
             this.end('restarting');
         })
+    }
+    async showNumber(number){
+        if(number) document.getElementById("number").innerHTML = number
     }
 }

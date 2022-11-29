@@ -12,7 +12,7 @@ export default class DView extends View {
 
     async clickOnButton(){
         Utils.onClickById("back", () => {
-            this.end('back');
+            this.end(8);
         })
     }
 }
